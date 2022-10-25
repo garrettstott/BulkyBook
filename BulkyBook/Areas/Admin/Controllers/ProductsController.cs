@@ -11,7 +11,7 @@ namespace BulkyBook.Controllers
   using Microsoft.AspNetCore.Mvc.Rendering;
   using Models;
   using Models.ViewModels;
-
+  [Area("Admin")]
   public class ProductsController : Controller {
 
     private readonly IUnitOfWork _unitOfWork;

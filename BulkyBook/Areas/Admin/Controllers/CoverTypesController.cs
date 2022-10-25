@@ -9,7 +9,7 @@ namespace BulkyBook.Controllers
   using DataAccess.Data;
   using DataAccess.Repository.IRepository;
   using Models;
-
+  [Area("Admin")]
   public class CoverTypesController : Controller {
 
     private readonly IUnitOfWork _unitOfWork;
