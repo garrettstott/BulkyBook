@@ -559,3 +559,9 @@
 /Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.Primitives.dll
 /Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/System.Text.Encodings.Web.dll
 /Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/System.Text.Json.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.DependencyInjection.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.FileProviders.Embedded.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.Identity.Core.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.Identity.Stores.dll

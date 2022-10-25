@@ -26,21 +26,6 @@ namespace BulkyBook.Controllers
       return View();
     }
 
-    // public IActionResult Create() {
-    //   return View();
-    // }
-    //
-    // [HttpPost]
-    // [ValidateAntiForgeryToken]
-    // public IActionResult Create(Product product) {
-    //   if (ModelState.IsValid) {
-    //    _unitOfWork.Product.Add(product);
-    //    _unitOfWork.Save();
-    //    return RedirectToAction("Index"); 
-    //   }
-    //   return View(product);
-    // }
-
     public IActionResult Upsert(int? id) {
       var product = _unitOfWork.Product.GetFirstOrDefault(product => product.Id == id);
       if (id == null || id == 0){ product = new Product(); }
@@ -90,9 +75,11 @@ namespace BulkyBook.Controllers
           productViewModel.Product.ImageUrl = @"/images/products/" + fullFileName;
         }
         if (productViewModel.Product.Id == 0){
+          TempData["success"] = "Product Created";
           _unitOfWork.Product.Add(productViewModel.Product);  
         }
         else {
+          TempData["success"] = "Product Updated";
           _unitOfWork.Product.Update(productViewModel.Product);
         }
         
@@ -115,6 +102,7 @@ namespace BulkyBook.Controllers
       }
       _unitOfWork.Product.Remove(product);
       _unitOfWork.Save();
+      TempData["success"] = "Product Deleted";
       return RedirectToAction("Index");
     }
    

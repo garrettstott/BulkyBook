@@ -51,6 +51,18 @@ build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ3VzdG9tZXIvVmlld3MvSG9tZS9Q
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/Areas/Admin/Views/Companies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFuaWVzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/Areas/Admin/Views/Companies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFuaWVzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/Areas/Admin/Views/Companies/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFuaWVzL1Vwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/Areas/Admin/Views/CoverTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ292ZXJUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

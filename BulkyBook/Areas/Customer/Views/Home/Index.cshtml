@@ -12,11 +12,11 @@
             <p class="card-title h4 text-primary">@product.Name</p>
             <p class="card-title text-info">by <b>@product.Author</b></p>
           </div>
-          <div class="">
+          <div class="mb-4">
             @if (product.ListPrice != product.Price){
-              <p class=""><strike><b>$@product.ListPrice.ToString("0.00")</b></strike></p>
+              <span class="text-danger"><strike><b>$@product.ListPrice.ToString("0.00")</b></strike></span>
             }
-            <p class=""><b>$@product.Price.ToString("0.00")</b></p>
+            <span class=""><b>$@product.Price.ToString("0.00")</b></span>
           </div>
           <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary form-control">Details</a>
         </div>

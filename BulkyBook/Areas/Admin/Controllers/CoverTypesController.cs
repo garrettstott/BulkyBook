@@ -32,6 +32,7 @@ namespace BulkyBook.Controllers
       if (ModelState.IsValid) {
        _unitOfWork.CoverType.Add(coverType);
        _unitOfWork.Save();
+       TempData["success"] = "Cover Type Created";
        return RedirectToAction("Index"); 
       }
       return View(coverType);
@@ -51,6 +52,7 @@ namespace BulkyBook.Controllers
       if (ModelState.IsValid){
         _unitOfWork.CoverType.Update(coverType);
         _unitOfWork.Save();
+        TempData["success"] = "Cover Type Updated";
         return RedirectToAction("Index");
       }
       return View(coverType);
@@ -64,6 +66,7 @@ namespace BulkyBook.Controllers
       }
       _unitOfWork.CoverType.Remove(coverType);
       _unitOfWork.Save();
+      TempData["success"] = "Cover Type Deleted";
       return RedirectToAction("Index");
     }
     

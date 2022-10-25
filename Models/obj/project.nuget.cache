@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "xeUW5YZD5tgHeN15cWau7Ez+H1J1+H7QG9WnsME7SKZHuKwgm05UJl/uox6dilsQdX5Vh5qExq7eI0B9NXJXRw==",
+  "dgSpecHash": "1WyW3gWaefmjJoAq9vZaV5ayVHxHxWsUqiWaA0CZbO6f7V0txgOUWT6Qbr5TYwwBD7VIatzXvgIz19wvfor2yg==",
   "success": true,
   "projectFilePath": "/Users/garrett/Code/playground/BulkyBookWeb/Models/Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/garrett/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.10/microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.10/microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.identity.core/6.0.10/microsoft.extensions.identity.core.6.0.10.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.identity.stores/6.0.10/microsoft.extensions.identity.stores.6.0.10.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "/Users/garrett/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

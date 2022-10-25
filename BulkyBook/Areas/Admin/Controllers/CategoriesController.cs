@@ -32,6 +32,7 @@ namespace BulkyBook.Controllers
       if (ModelState.IsValid) {
        _unitOfWork.Category.Add(category);
        _unitOfWork.Save();
+       TempData["success"] = "Category Created";
        return RedirectToAction("Index"); 
       }
       return View(category);
@@ -51,6 +52,7 @@ namespace BulkyBook.Controllers
       if (ModelState.IsValid){
         _unitOfWork.Category.Update(category);
         _unitOfWork.Save();
+        TempData["success"] = "Category Updated";
         return RedirectToAction("Index");
       }
       return View(category);
@@ -64,6 +66,7 @@ namespace BulkyBook.Controllers
       }
       _unitOfWork.Category.Remove(category);
       _unitOfWork.Save();
+      TempData["success"] = "Category Deleted";
       return RedirectToAction("Index");
     }
     
