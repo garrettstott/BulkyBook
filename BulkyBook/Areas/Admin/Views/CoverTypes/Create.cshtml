@@ -1,0 +1,24 @@
+@model CoverType
+
+<form method="post">
+  <div class="">
+    <div>
+      <h2>New Cover Type</h2>
+    </div>
+    <div class="mb-2">
+      <label asp-for="Name" class="form-label"></label>
+      <input asp-for="Name" class="form-control"/>
+      <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary me-2">Create</button>
+      <a asp-controller="CoverTypes" asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+  </div>
+</form>
+
+@section Scripts {
+  @{
+    <partial name="_ValidationScriptsPartial"></partial>
+  }
+}

@@ -1,0 +1,34 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+button[type='submit'].link {
+  background: none;
+  border: none;
+  color: #e74c3c;
+}
+
+button[type='submit'].link:hover {
+  background: none;
+  border: none;
+  color: #c44133;
+}
+
+a.card.card-body {
+  text-decoration: none;
+}

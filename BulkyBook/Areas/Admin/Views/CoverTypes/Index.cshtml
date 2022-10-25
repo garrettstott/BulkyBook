@@ -1,0 +1,42 @@
+@model IEnumerable<CoverType>
+
+<div class="container">
+  <div class="row pb-3">
+    <div class="col-6">
+      <h2>Cover Types</h2>
+    </div>
+    <div class="col-6 text-right">
+      <a class="btn btn-primary" asp-controller="CoverTypes" asp-action="Create">
+        <i class="bi bi-plus-circle-fill me-1"></i> Add
+      </a>
+    </div>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="w-25">Name</th>
+        <th class="text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var coverType in Model) {
+        <tr>
+          <td class="w-50">@coverType.Name</td>
+          <td class="text-right">
+            <div>
+              <a asp-controller="CoverTypes" asp-action="Edit" asp-route-id="@coverType.Id">
+                <i class="bi bi-pencil me-1"></i> Edit
+              </a>
+              <span class="me-1 ms-2">|</span>
+              <form asp-controller="CoverTypes" asp-action="Delete" method="post" asp-route-id="@coverType.Id" style="display:inline-block">
+                <button type="submit" onclick="return confirm('Are you sure?');" class="link">
+                  <i class="bi bi-trash me-1"></i> Delete
+                </button>
+              </form>
+            </div>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

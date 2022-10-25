@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Categories\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\AccessDenied.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ConfirmEmail.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ExternalLogin.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ForgotPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Lockout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\LoginWith2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Email.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResendEmailConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\Categories\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Categories\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Home\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Home\Privacy.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\images\products" />
+    </ItemGroup>
+
+</Project>

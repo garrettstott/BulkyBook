@@ -1,0 +1,31 @@
+@model IEnumerable<Product>
+
+<div class="container">
+  <div class="row pb-3">
+    <div class="col-6">
+      <h2>Products</h2>
+    </div>
+    <div class="col-6 text-right">
+      <a class="btn btn-primary" asp-controller="Products" asp-action="Upsert">
+        <i class="bi bi-plus-circle-fill me-1"></i> Add
+      </a>
+    </div>
+  </div>
+  <table id="ProductTable"class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th class="">Name</th>
+      <th class="">List Price</th>
+      <th class="">Price</th>
+      <th class="">Category</th>
+      <th class="">Cover Type</th>
+      <th class="">Image</th>
+      <th class="text-right">Actions</th>
+    </tr>
+    </thead>
+  </table>
+</div>
+
+@section Scripts{
+  <script src="~/js/product.js"></script>
+}
