@@ -2,7 +2,7 @@
 
 <div class="row">
   @foreach (var product in Model){
-    <div class="col-lg-3" style="height:612px">
+    <div class="col-lg-3" style="min-height:612px">
       <div class="card">
         <a asp-action="Details" asp-route-productId="@product.Id">
           <img src="@product.ImageUrl" class="card-img-top rounded"/>
