@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 public class ApplicationUser : IdentityUser {
-  public int Id { get; set; }
   [Required]
   public string Name { get; set; }
   public string? StreetAddress { get; set; }

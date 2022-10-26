@@ -4,6 +4,7 @@ namespace BulkyBook.Areas.Customer.Controllers;
 
 using DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Models;
 using Models.ViewModels;
 using System.Security.Claims;
@@ -27,7 +28,7 @@ public class CartController : Controller {
       ListCart = _unitOfWork.Cart.GetAll(
        cart => cart.ApplicationUserId == claim,
        includeProperties: "Product"
-      )
+      ).ToList()
     };
     foreach (var cart in CartViewModel.ListCart){
       CartViewModel.Total += (cart.Product.Price * cart.Count);
@@ -37,13 +38,12 @@ public class CartController : Controller {
 
   [HttpPost] 
   [ValidateAntiForgeryToken] 
-  public IActionResult Details(CartViewModel cartViewModel) {
-    var claimsIdentity = (ClaimsIdentity)User.Identity;
-    var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
-    // foreach (var cart in cartViewModel.ListCart){
-    //   _unitOfWork.Cart.UpdateCount(cart, cart.Count);
-    // }
-    // _unitOfWork.Save();
+  public IActionResult Details(List<Cart> listCart) {
+    foreach (var cart in listCart){
+      Cart existingCart = _unitOfWork.Cart.GetFirstOrDefault(c => c.Id == cart.Id);
+      _unitOfWork.Cart.UpdateCount(existingCart, cart.Count);
+    }
+    _unitOfWork.Save();
     return RedirectToAction("Details");
   }
 
