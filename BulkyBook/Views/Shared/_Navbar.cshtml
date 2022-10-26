@@ -25,11 +25,16 @@
             </div>
           </li>
         </ul>
-        <partial name="_LoginPartial"/>
         @* <form class="d-flex"> *@
         @*   <input class="form-control me-sm-2" type="text" placeholder="Search"> *@
         @*   <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> *@
         @* </form> *@
+      </div>
+      <partial name="_LoginPartial"/>
+      <div class="nav-item">
+        <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Details">
+          <i class="bi bi-cart"></i> HMM
+        </a>
       </div>
     </div>
   </nav>

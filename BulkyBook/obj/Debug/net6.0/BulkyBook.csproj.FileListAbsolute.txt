@@ -565,3 +565,5 @@
 /Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.FileProviders.Embedded.dll
 /Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.Identity.Core.dll
 /Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/refs/Microsoft.Extensions.Identity.Stores.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/Utility.dll
+/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/bin/Debug/net6.0/Utility.pdb

@@ -1,0 +1,84 @@
+@model Models.ViewModels.CartViewModel
+
+<form method="post">
+	<div class="">
+		<div class="card">
+			<div class="card-header bg-dark text-light ml-0">
+				<div class="row">
+					<div class="col-6">
+						<i class="fa fa-shopping-cart"></i>
+						Shopping Cart
+					</div>
+					<div class="col-6 text-end">
+						<a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-info btn-sm">Continue Shopping</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-body">
+				<input asp-for="@Model.ListCart" />
+				@foreach (var item in Model.ListCart){
+					<div class="row">
+						<div class="d-none d-lg-block col-1 col-lg-1 text-center py-2">
+							<img src="@item.Product.ImageUrl" class="rounded" width="100%"/>
+						</div>
+						<div class="col-6 col-lg-6">
+							<h5><strong>@item.Product.Name</strong></h5>
+							<p><small>@item.Product.Description</small></p>
+						</div>
+						<div class="col-5 col-lg-5">
+							<div class="d-flex justify-content-between">
+								<div class="d-flex">
+									<div class="my-auto fw-bolder">
+										@item.Product.Price.ToString("c")
+									</div>
+									<div class="my-auto mx-2 text-muted">
+										X
+									</div>
+									<div class="w-25">
+										<input asp-for="@item.Count" class="form-control"/>
+									</div>
+									<div class="my-auto mx-2 text-muted">
+										Subtotal
+									</div>
+									<div class="my-auto">
+										@((item.Product.Price * item.Count).ToString("c"))
+									</div>
+								</div>
+								<div>
+									<a asp-action="Remove" asp-route-cartId="@item.Id" class="btn btn-danger">
+										<i class="bi bi-trash-fill"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr/>
+				}
+				<div class="row">
+					<div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8">
+						<div class="text-right mb-3">
+							<input type="submit" value="Update Cart" class="btn btn-success"/>
+						</div>
+
+						<ul class="list-group">
+							<li class="list-group-item d-flex justify-content-between bg-light">
+								<span class="text-info"> Total (USD)</span>
+								<strong class="text-info">@Model.Total.ToString("c")</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="card-footer">
+				<div class="card-footer row">
+					<div class="col-sm-12 col-lg-4 col-md-6 offset-lg-8 offset-md-6">
+						@* <a asp-action="Summary" class="btn btn-success form-control">Summary</a> *@
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

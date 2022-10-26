@@ -3726,6 +3726,19 @@
         "runtime": {
           "bin/placeholder/Models.dll": {}
         }
+      },
+      "Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utility.dll": {}
+        }
       }
     }
   },
@@ -10491,6 +10504,11 @@
       "type": "project",
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
+    },
+    "Utility/1.0.0": {
+      "type": "project",
+      "path": "../Utility/Utility.csproj",
+      "msbuildProject": "../Utility/Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10501,7 +10519,8 @@
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
+      "Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10531,6 +10550,9 @@
           "projectReferences": {
             "/Users/garrett/Code/playground/BulkyBookWeb/DataAccess/DataAccess.csproj": {
               "projectPath": "/Users/garrett/Code/playground/BulkyBookWeb/DataAccess/DataAccess.csproj"
+            },
+            "/Users/garrett/Code/playground/BulkyBookWeb/Utility/Utility.csproj": {
+              "projectPath": "/Users/garrett/Code/playground/BulkyBookWeb/Utility/Utility.csproj"
             }
           }
         }

@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace BulkyBook.Areas.Customer.Controllers;
 
 using DataAccess.Repository.IRepository;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Models;
+using System.Security.Claims;
 
 [Area("Customer")]
 public class HomeController : Controller
@@ -23,12 +26,36 @@ public class HomeController : Controller
     return View(products);
   }
 
-  public IActionResult Details(int? id) {
+  public IActionResult Details(int productId) {
     Cart cart = new() {
-      Count=1,
-      Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,CoverType"),
+      Count = 1,
+      ProductId = productId,
+      Product = _unitOfWork.Product.GetFirstOrDefault(product => product.Id == productId, includeProperties: "Category,CoverType"),
     };
     return View(cart);
+  }
+
+  [HttpPost] 
+  [ValidateAntiForgeryToken] 
+  [Authorize] 
+  public IActionResult Details(Cart cart) {
+    var claimsIdentity = (ClaimsIdentity)User.Identity;
+    var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+    Cart existingCart = _unitOfWork.Cart.GetFirstOrDefault(
+    f => f.ApplicationUserId == claim
+         &&
+         f.ProductId == cart.ProductId
+    );
+    if (existingCart == null){
+      cart.ApplicationUserId = claim;
+      _unitOfWork.Cart.Add(cart);
+    }
+    else{
+      _unitOfWork.Cart.UpdateCount(existingCart, existingCart.Count+cart.Count);
+    }
+    _unitOfWork.Save();
+    TempData["success"] = "Added to cart";
+    return RedirectToAction("Details", "Cart");
   }
 
   public IActionResult Privacy() {

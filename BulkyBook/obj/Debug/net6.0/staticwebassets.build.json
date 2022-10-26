@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Mkck+/wUeEitb8zy4OWOC+O0BFjD8C7b9/I5Sa90/6Q=",
+  "Hash": "QjCDlqEzo9Vzrm+6WPOLs3XhC5FsXzR6bK9ZvqxV9mY=",
   "Source": "BulkyBook",
   "BasePath": "_content/BulkyBook",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
+      "Identity": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/images/products/866d488f-4927-401e-a95f-a7367e9ccdb6.jpeg",
+      "SourceId": "BulkyBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/",
+      "BasePath": "_content/BulkyBook",
+      "RelativePath": "images/products/866d488f-4927-401e-a95f-a7367e9ccdb6.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/products/866d488f-4927-401e-a95f-a7367e9ccdb6.jpeg"
+    },
+    {
       "Identity": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/images/products/9c296287-6447-4be8-a725-5a82e1af7ad0.jpeg",
       "SourceId": "BulkyBook",
       "SourceType": "Discovered",
@@ -1137,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/products/9c296287-6447-4be8-a725-5a82e1af7ad0.jpeg"
+    },
+    {
+      "Identity": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/images/products/f71f5057-c8c1-4f7d-bd05-1f1c6086bb5c.jpeg",
+      "SourceId": "BulkyBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/",
+      "BasePath": "_content/BulkyBook",
+      "RelativePath": "images/products/f71f5057-c8c1-4f7d-bd05-1f1c6086bb5c.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/products/f71f5057-c8c1-4f7d-bd05-1f1c6086bb5c.jpeg"
     },
     {
       "Identity": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/js/company.js",
