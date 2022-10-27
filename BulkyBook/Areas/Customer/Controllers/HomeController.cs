@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Models;
 using System.Security.Claims;
+using Utility;
 
 [Area("Customer")]
 public class HomeController : Controller
@@ -52,8 +53,13 @@ public class HomeController : Controller
     }
     else{
       _unitOfWork.Cart.UpdateCount(existingCart, existingCart.Count+cart.Count);
+      _unitOfWork.Save();
     }
     _unitOfWork.Save();
+    HttpContext.Session.SetInt32(
+      SD.SESSION_CART,
+      _unitOfWork.Cart.GetAll(c=>c.ApplicationUserId==claim).Count()
+    );
     TempData["success"] = "Added to cart";
     return RedirectToAction("Details", "Cart");
   }

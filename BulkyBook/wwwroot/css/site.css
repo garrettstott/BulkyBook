@@ -32,3 +32,19 @@ button[type='submit'].link:hover {
 a.card.card-body, a:hover {
   text-decoration: none;
 }
+
+i.bi-bag {
+  font-size: 2em;
+}
+
+.nav-link.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-link.cart span {
+  position: absolute;
+  top: 43%;
+}

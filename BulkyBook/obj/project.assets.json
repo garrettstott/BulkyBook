@@ -3705,7 +3705,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
-          "Models": "1.0.0"
+          "Models": "1.0.0",
+          "Utility": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DataAccess.dll": {}

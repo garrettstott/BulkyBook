@@ -119,6 +119,9 @@
             "projectReferences": {
               "/Users/garrett/Code/playground/BulkyBookWeb/Models/Models.csproj": {
                 "projectPath": "/Users/garrett/Code/playground/BulkyBookWeb/Models/Models.csproj"
+              },
+              "/Users/garrett/Code/playground/BulkyBookWeb/Utility/Utility.csproj": {
+                "projectPath": "/Users/garrett/Code/playground/BulkyBookWeb/Utility/Utility.csproj"
               }
             }
           }

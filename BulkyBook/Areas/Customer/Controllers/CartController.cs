@@ -47,7 +47,16 @@ public class CartController : Controller {
     return RedirectToAction("Details");
   }
 
-  public IActionResult Remove() {
+  public IActionResult Remove(int id) {
+    var cart = _unitOfWork.Cart.GetFirstOrDefault(cart => cart.Id == id);
+    _unitOfWork.Cart.Remove(cart);
+    _unitOfWork.Save();
+    var claimsIdentity = (ClaimsIdentity)User.Identity;
+    var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+    HttpContext.Session.SetInt32(
+      SD.SESSION_CART,
+      _unitOfWork.Cart.GetAll(c=>c.ApplicationUserId==claim).Count()
+    );
     return RedirectToAction("Details");
   }
   
