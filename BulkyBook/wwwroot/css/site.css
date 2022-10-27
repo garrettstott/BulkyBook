@@ -29,6 +29,6 @@ button[type='submit'].link:hover {
   color: #c44133;
 }
 
-a.card.card-body {
+a.card.card-body, a:hover {
   text-decoration: none;
 }

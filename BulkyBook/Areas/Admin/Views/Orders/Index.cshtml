@@ -1,0 +1,76 @@
+@using Utility
+@model IEnumerable<Product>
+@{
+  var status = Context.Request.Query["status"];
+  var all = "btn-outline-primary";
+  var pending = "btn-outline-primary";
+  var processing = "btn-outline-primary";
+  var shipped = "btn-outline-primary";
+  var refunded = "btn-outline-primary";
+  var cancelled = "btn-outline-primary";
+  switch (status){
+    case "Pending":
+      pending = "btn-outline-success";
+      break;
+    case "Processing":
+      processing = "btn-outline-success";
+      break;
+    case "Shipped":
+      shipped = "btn-outline-success";
+      break;
+    case "Refunded":
+      refunded = "btn-outline-success";
+      break;
+    case "Cancelled":
+      cancelled = "btn-outline-success";
+      break;
+    default:
+      all = "btn-outline-success";
+      break;
+  }
+}
+
+<div class="">
+  <div class="row pb-3">
+    <div class="col-12 d-flex justify-content-between">
+      <h2>Orders</h2>
+      <div class="d-flex justify-content-end">
+        <a asp-controller="Orders" asp-action="Index" asp-route-status="all" class="mr-1 btn btn-sm @all">
+          All
+        </a>
+        <a asp-controller="Orders" asp-action="Index" asp-route-status="@(SD.STATUS_PENDING)" class="mr-1 btn btn-sm @pending">
+          @(SD.STATUS_PENDING)
+        </a>
+        <a asp-controller="Orders" asp-action="Index" asp-route-status="@(SD.STATUS_PROCESSING)" class="mr-1 btn btn-sm @processing">
+          @(SD.STATUS_PROCESSING)
+        </a>
+        <a asp-controller="Orders" asp-action="Index" asp-route-status="@(SD.STATUS_SHIPPED)" class="mr-1 btn btn-sm @shipped">
+          @(SD.STATUS_SHIPPED)
+        </a>
+        <a asp-controller="Orders" asp-action="Index" asp-route-status="@(SD.STATUS_REFUNDED)" class="mr-1 btn btn-sm @refunded">
+          @(SD.STATUS_REFUNDED)
+        </a>
+        <a asp-controller="Orders" asp-action="Index" asp-route-status="@(SD.STATUS_CANCELLED)" class="btn btn-sm @cancelled">
+          @(SD.STATUS_CANCELLED)
+        </a>
+      </div>
+    </div>
+  </div>
+  <table id="OrdersTable" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th class="">ID</th>
+      <th class="">Name</th>
+      <th class="">Phone Number</th>
+      <th class="">Email</th>
+      <th class="">Order Status</th>
+      <th class="">Order Total</th>
+      <th class="text-right">Actions</th>
+    </tr>
+    </thead>
+  </table>
+</div>
+
+@section Scripts{
+  <script src="~/js/orders.js"></script>
+}

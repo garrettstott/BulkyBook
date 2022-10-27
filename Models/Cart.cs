@@ -8,7 +8,8 @@ public class Cart {
   [Key]
   public int Id { get; set; }
   public int Count { get; set; }
-  
+  [NotMapped]
+  public double Price { get; set; }
   public int ProductId { get; set; }
   [ForeignKey("ProductId")]
   [ValidateNever]

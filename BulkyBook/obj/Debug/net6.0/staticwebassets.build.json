@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hNTGgmnsiFmq1ScWxnsQLX/nl+s+hjp+UEaSkorGA58=",
+  "Hash": "4EQh5WDxl/p23xZTrrbwC3DWO9BQEGA+ZHgb46HEAmA=",
   "Source": "BulkyBook",
   "BasePath": "_content/BulkyBook",
   "Mode": "Default",
@@ -1239,6 +1239,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/company.js"
+    },
+    {
+      "Identity": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/js/orders.js",
+      "SourceId": "BulkyBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/",
+      "BasePath": "_content/BulkyBook",
+      "RelativePath": "js/orders.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/orders.js"
     },
     {
       "Identity": "/Users/garrett/Code/playground/BulkyBookWeb/BulkyBook/wwwroot/js/product.js",
